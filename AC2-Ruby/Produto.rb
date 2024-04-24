@@ -1,5 +1,5 @@
 class Produto
-    attr_accessor :nome, :preco, :pesoKg, :fragil, :categoria
+    attr_reader :nome, :preco, :pesoKg, :fragil, :categoria
 
     def initialize nome,preco,pesoKg,fragil,categoria 
         @nome = nome 
