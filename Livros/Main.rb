@@ -27,6 +27,8 @@ class Main
         end
     end
 
+    new.listarLista
+
     # def FiltrarLivrosfiltrarPorValor preco 
     #     puts "Buscando livros a partir de R$#{preco}\n"
     #     puts
@@ -53,18 +55,13 @@ class Main
     #     end
     # end
 
-    livro2 = Livro.new("Teste","Teste",2009,100,true)
-    puts livro2.nome 
-    puts livro2.calcularPreco(livro2.preco)
+    def filtrar 
+        filtros2 = FiltrarLivros.new()
+        filtros2.filtrarPorValor(@listaLivros,20)
+        filtros2.filtrarPorAnoLancamento(@listaLivros,2010)
+        filtros2.filtrarPorAutor(@listaLivros,"lucas faes")
+    end
 
-    new.listarLista
-
-
-    filtros.filtrarPorValor(@listaLivros,20)
-    filtros.filtrarPorAnoLancamento(@listaLivros,2010)
-    filtros.filtrarPorAutor(@listaLivros,"lucas faes")
-    # FiltrarLivros.filtrarPorValor(@listaLivros,20)
-    # FiltrarLivros.filtarPorAnoLancamento(@listaLivros,2010)
-    # FiltrarLivros.filtrarPorAutor(@listaLivros,"lucas faes")
+    new.filtrar 
 
 end
