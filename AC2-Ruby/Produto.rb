@@ -10,14 +10,7 @@ class Produto
     end
 
     def calcularFrete 
-        if @fragil 
-            frete = 0.2 * @pesoKg
-        elsif
-            frete = 0.1 * @pesoKg
-        end
-        return frete
+        @fragil ? 0.2 * @pesoKg : 0.1 * @pesoKg
     end
-
-
 
 end
