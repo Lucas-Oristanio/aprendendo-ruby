@@ -1,15 +1,17 @@
 frutas = ["maça", "banana", "laranja", "uva", "morango", "abacaxi", "melancia", "pera", "kiwi", "manga"]
+animais = ["cachorro", "gato", "passaro", "macaco", "cobra", "elefante", "tigre", "leao", "girafa", "rinoceronte", "pinguim", "panda", "urso", "camelo", "peixe", "tartaruga", "papagaio", "pato", "lobo", "coelho"]
+filmes = ["titanic", "avatar", "star-wars", "harry-potter", "jurassic-park", "matrix", "o-senhor-dos-aneis", "toy-story", "vingadores", "o-rei-leao", "forrest-gump", "interestelar", "pulp-fiction", "frozen", "jurassic-world", "os-incriveis"]
+
 letras = []
 
-def forca_fruta fruta
-    palavraCerta = fruta.chars
-    tamanho = fruta.size
+def forca palavra
+    palavraCerta = palavra.chars
+    tamanho = palavra.size
     palavraUsuario = Array.new(tamanho," ")
     tentativas = 0
-    puts "A palavra tem: #{fruta.size} letras"
+    puts "A palavra tem: #{palavra.size} letras"
 
     while palavraCerta != palavraUsuario
-        puts "Palavra certa: #{palavraCerta}"
         puts "Palavra: #{palavraUsuario}"
         puts "Digite uma letra: "
         letra = gets.chomp.to_s 
@@ -22,17 +24,21 @@ def forca_fruta fruta
         end
         tentativas += 1
     end
-
+    puts "#{palavra}"
     puts "Parabéns!!! Você conseguiu com #{tentativas} tentativas!"
 
 end
 
 puts "Jogo da Forca"
-puts "Escolha o tema da palavra: \n1 - Frutas"
+puts "Escolha o tema da palavra: \n1 - Frutas\n2 - Animais\n3 - Filmes famososs"
 
 tema = gets.chomp.to_i 
 
 case tema
 when 1
-    forca_fruta (frutas[rand(10)]) # Vai pegar algum valor de frutas na posicao entre 0-9
+    forca (frutas[rand(frutas.size)]) # Vai pegar algum valor de frutas na posicao entre 0-9
+when 2
+    forca (animais[rand(animais.size)])
+when 3
+    forca (filmes[rand(filmes.size)])
 end
