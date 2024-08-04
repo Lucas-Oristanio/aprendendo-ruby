@@ -21,3 +21,4 @@ puts array_bizarro[2] # output = "Faes"
 # Esse tipo de array quebra palavra por palavra e armazena cada uma dalas em um index, de forma ordenada
 # Pode ser utilizado de diversas formas para solucionar alguns problemas de forma prática
 
+#teste
